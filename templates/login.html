@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<main>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="login-logo">
+        <h2>Login to Your Account</h2>
+        <form action="/login" method="post" class="login-form">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-login">LOGIN</button>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

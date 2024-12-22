@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Add User{% endblock %}
+
+{% block content %}
+<div>
+    <h2 style="text-align: center; color: #ffffff;">ADD NEW USERS</h2>
+</div>
+<form method="POST" action="{{ url_for('add_user') }}" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="first_name"  placeholder="FIRST NAME" name="first_name" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="last_name" placeholder="LAST NAME" name="last_name" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="username" placeholder="USERNAME" name="username" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <input type="password" class="form-control" id="password" placeholder="PASSWORD" name="password" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <select class="form-control" placeholder="ROLE" id="role" name="role" required autocomplete="off">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="contact" placeholder="CONTACT NUMBER" name="contact" required autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <input class="form-control" id="address" name="address" placeholder="ADDRESS" required autocomplete="off"></input>
+    </div>
+    <div class="mb-3">
+        <label for="profile_picture" class="form-label" style="text-align: center; font-size: 18px; color: #ffffff;">Profile Picture</label>
+        <input type="file" class="form-control" id="profile_picture" name="profile_picture" accept=".jpg,.jpeg,.png">
+    </div>
+    <button type="submit" class="btn btn-primary" style="font-size: 25px; font-weight: bold;">CLICK HERE TO ADD</button>
+</form>
+{% endblock %}
